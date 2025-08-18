@@ -34,6 +34,13 @@ elif command -v dnf >/dev/null 2>&1; then
   # Fedora/CentOS
   # util-linux-user is for chsh
   sudo dnf install -y zsh vim git curl fzf util-linux-user
+elif [[ "$(uname)" == "Darwin" ]]; then
+  # macOS
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Homebrew not found. Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+  brew install zsh vim git curl fzf
 else
   echo "Unsupported package manager. Please install zsh, vim, git, curl, fzf and chsh manually." >&2
   exit 1

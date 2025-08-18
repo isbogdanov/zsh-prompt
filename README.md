@@ -19,6 +19,7 @@ This script automates the setup of a feature-rich Zsh environment on fresh Debia
 
 -   Debian / Ubuntu (uses `apt-get`)
 -   Fedora / CentOS (uses `dnf`)
+-   macOS (uses `brew`)
 
 ## Prerequisites
 
