@@ -31,9 +31,10 @@ if command -v apt-get >/dev/null 2>&1; then
   sudo apt-get update -y
   sudo apt-get install -y zsh vim git curl fzf
 elif command -v dnf >/dev/null 2>&1; then
-  # Fedora/CentOS
+  # Fedora/CentOS/AlmaLinux
   # util-linux-user is for chsh
-  sudo dnf install -y zsh vim git curl fzf util-linux-user
+  # fzf is not in default repos for AlmaLinux/RHEL, will be installed from git
+  sudo dnf install -y zsh vim git curl util-linux-user
 elif [[ "$(uname)" == "Darwin" ]]; then
   # macOS
   if ! command -v brew >/dev/null 2>&1; then
