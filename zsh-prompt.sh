@@ -92,6 +92,7 @@ append_once() {
 
 append_once ""  # spacer
 append_once "# --- custom zsh setup ---"
+append_once 'export ZSH="$HOME/.oh-my-zsh"'
 append_once 'source $ZSH/oh-my-zsh.sh'
 append_once 'SPACESHIP_TIME_SHOW=true'
 append_once 'SPACESHIP_PROMPT_ORDER=(user dir host git exec_time line_sep jobs exit_code char)'
